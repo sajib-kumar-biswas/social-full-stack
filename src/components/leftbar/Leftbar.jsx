@@ -1,6 +1,8 @@
 import './leftbar.css';
 import { RssFeed, Chat, Group, Bookmark, HelpOutline } from '@material-ui/icons';
 import { PlayCircleFilledOutlined, WorkOutline,Event,School } from '@material-ui/icons';
+import {Users} from '../../dummyData'
+import CloseFriend from '../closeFriend/CloseFriend';
 
 const Leftbar = () => {
   return (
@@ -47,50 +49,11 @@ const Leftbar = () => {
         <button className="leftbarButton">Show more</button>
         <hr className='leftbarHr'/>
         <ul className="leftbarFriends">
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
-            <li className="leftbarFriend">
-                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                <span className="leftbarFriendName">Page Denin</span>
-            </li>
+            {
+              Users.map(u => (
+                <CloseFriend key={u.id} user={u} />
+              ))
+            }
         </ul>
       </div>
     </div>

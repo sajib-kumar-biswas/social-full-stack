@@ -1,5 +1,6 @@
 import { Chat, Notifications, Person, Search } from '@material-ui/icons';
 import './topbar.css'
+
 const Topbar = () => {
     return (
         <div className='topbarContainer'>
@@ -43,7 +44,7 @@ const Topbar = () => {
                         </span>
                     </div>
                 </div>
-                <img src="/assets/person/1.jpeg" alt='profile picture' className='topbarImage' />
+                <img src="/assets/person/1.jpeg" alt='profile' className='topbarImage' />
             </div>
         </div>
     )
